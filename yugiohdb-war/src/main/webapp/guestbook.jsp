@@ -1,3 +1,4 @@
+
 <%-- //[START all]--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.google.appengine.api.users.User" %>
@@ -38,13 +39,15 @@
 <%
 } else {
 %>
-<p>Hello!
+<p>Hello! ver2
     <a href="<%= userService.createLoginURL(request.getRequestURI()) %>">Sign in</a>
     to include your name with greetings you post.</p>
 <%
     }
 %>
-
+<br/><br/>
+<a href="updater.jsp">updater</a>
+<br/><br/>
 <%
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     Key guestbookKey = KeyFactory.createKey("Guestbook", guestbookName);
